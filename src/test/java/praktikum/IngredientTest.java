@@ -23,7 +23,7 @@ public class IngredientTest {
         this.ingredientPrice = ingredientPrice;
     }
 
-    @Parameterized.Parameters(name = "Тестовые данные: {0}{1}")
+    @Parameterized.Parameters(name = "Тестовые данные: {0} {1}")
     public static Object[][] getIngredients() {
         return new Object[][] {
                 {SAUCE, "hot sauce", 100f},
@@ -49,12 +49,12 @@ public class IngredientTest {
     @Test
     public void shouldBePossibleToGetIngredientName() {
         String actualIngredientName = testIngredient.getName();
-        assertThat("Фактический тип ингредиента не совпал с ожидаемым", actualIngredientName, equalTo(ingredientName));
+        assertThat("Фактическое имя ингредиента не совпало с ожидаемым", actualIngredientName, equalTo(ingredientName));
     }
 
     @Test
     public void shouldBePossibleToGetIngredientPrice() {
         float actualIngredientPrice = testIngredient.getPrice();
-        assertThat("Фактический тип ингредиента не совпал с ожидаемым", actualIngredientPrice, equalTo(ingredientPrice));
+        assertThat("Фактическая цена ингредиента не совпала с ожидаемым", actualIngredientPrice, equalTo(ingredientPrice));
     }
 }
