@@ -1,6 +1,5 @@
 package praktikum;
 
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -40,7 +39,7 @@ public class BurgerTest {
     public void shouldBePossibleToAddIngredient() {
         testBurger.addIngredient(ingredientOne);
 
-        assertThat("Не получилось добавить ингридиент", testBurger.ingredients.contains(ingredientOne));
+        assertThat("Не получилось добавить ингредиент", testBurger.ingredients.contains(ingredientOne));
     }
 
     @Test
@@ -48,7 +47,7 @@ public class BurgerTest {
         testBurger.addIngredient(ingredientOne);
         testBurger.removeIngredient(0);
 
-        assertThat("Не получилось удалить ингридиент", testBurger.ingredients.isEmpty());
+        assertThat("Не получилось удалить ингредиент", testBurger.ingredients.isEmpty());
     }
 
     @Test
@@ -57,7 +56,7 @@ public class BurgerTest {
         testBurger.addIngredient(ingredientTwo);
         testBurger.moveIngredient(1,0);
 
-        assertThat("Не получилось переместить ингридиент", testBurger.ingredients.get(0), equalTo(ingredientTwo));
+        assertThat("Не получилось переместить ингредиент", testBurger.ingredients.get(0), equalTo(ingredientTwo));
     }
 
     @Test
@@ -95,5 +94,4 @@ public class BurgerTest {
                                  "\r\nPrice: 500,000000\r\n";
         assertThat("Фактический рецепт не совпал с ожидаемым", testBurger.getReceipt(), equalTo(expectedReceipt));
     }
-
 }

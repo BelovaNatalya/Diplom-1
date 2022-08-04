@@ -23,7 +23,7 @@ public class IngredientTest {
         this.ingredientPrice = ingredientPrice;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Тестовые данные: {0}{1}")
     public static Object[][] getIngredients() {
         return new Object[][] {
                 {SAUCE, "hot sauce", 100f},
@@ -43,18 +43,18 @@ public class IngredientTest {
     @Test
     public void shouldBePossibleToGetIngredientType() {
         IngredientType actualIngredientType = testIngredient.getType();
-        assertThat("Фактический тип ингридиента не совпал с ожидаемым", actualIngredientType, equalTo(ingredientType));
+        assertThat("Фактический тип ингредиента не совпал с ожидаемым", actualIngredientType, equalTo(ingredientType));
     }
 
     @Test
     public void shouldBePossibleToGetIngredientName() {
         String actualIngredientName = testIngredient.getName();
-        assertThat("Фактический тип ингридиента не совпал с ожидаемым", actualIngredientName, equalTo(ingredientName));
+        assertThat("Фактический тип ингредиента не совпал с ожидаемым", actualIngredientName, equalTo(ingredientName));
     }
 
     @Test
     public void shouldBePossibleToGetIngredientPrice() {
         float actualIngredientPrice = testIngredient.getPrice();
-        assertThat("Фактический тип ингридиента не совпал с ожидаемым", actualIngredientPrice, equalTo(ingredientPrice));
+        assertThat("Фактический тип ингредиента не совпал с ожидаемым", actualIngredientPrice, equalTo(ingredientPrice));
     }
 }

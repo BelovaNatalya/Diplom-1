@@ -12,16 +12,16 @@ public class IngredientTypeTest {
     @Test
     public void shouldBeTwoTypesOfIngredients() {
         int expectedAmount = 2;
-        assertThat("Фактическое количество типов ингридиентов не совпало с ожидаемым", IngredientType.values().length, equalTo(expectedAmount));
+        assertThat("Фактическое количество типов ингредиентов не совпало с ожидаемым", IngredientType.values().length, equalTo(expectedAmount));
     }
 
     @Test
     public void shouldBeSauceType() {
-        assertThat("Типа ингридиентов sauce нет в списке", SAUCE.name(), equalTo("SAUCE"));
+        assertThat("Типа ингредиентов sauce нет в списке", SAUCE.name(), equalTo("SAUCE"));
     }
 
     @Test
     public void shouldBeFillingType() {
-        assertThat("Типа ингридиентов filling нет в списке", FILLING.name(), equalTo("FILLING"));
+        assertThat("Типа ингредиентов filling нет в списке", FILLING.name(), equalTo("FILLING"));
     }
 }
